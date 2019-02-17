@@ -1,0 +1,14 @@
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\Dominos.Dal.dll.config
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\Dominos.Dal.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\Dominos.Dal.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\Dominos.Entities.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\Dominos.Entities.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\obj\Debug\Dominos.Dal.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\obj\Debug\Dominos.Dal.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\obj\Debug\Dominos.Dal.csproj.CopyComplete
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\obj\Debug\Dominos.Dal.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.Dal\obj\Debug\Dominos.Dal.pdb

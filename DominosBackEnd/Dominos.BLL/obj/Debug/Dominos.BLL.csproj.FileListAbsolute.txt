@@ -1,0 +1,16 @@
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.BLL.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.BLL.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Dal.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Entities.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Dal.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Dal.dll.config
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Entities.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\obj\Debug\Dominos.BLL.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\obj\Debug\Dominos.BLL.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\obj\Debug\Dominos.BLL.csproj.CopyComplete
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\obj\Debug\Dominos.BLL.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\obj\Debug\Dominos.BLL.pdb
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Interfaces.dll
+C:\Users\pc\source\repos\DominosBackEnd\Dominos.BLL\bin\Debug\Dominos.Interfaces.pdb
