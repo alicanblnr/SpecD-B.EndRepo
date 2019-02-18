@@ -15,8 +15,8 @@
     <title>Index</title>
 </head>
 <body>
-    <form class="form-horizontal" action="javascript:void(0);" onsubmit="SubmitForm()" id="FormModal">
-        <table class="table">
+    <div class="form-horizontal">
+        <table class="table" id="myTable">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Id)
@@ -42,51 +42,176 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Id)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Desc)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Price)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DiscountPrice)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.ProductTypeId)
-                    </td>
+                    <td id="tdId">@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td id="tdName">@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td id="tdDesc">@Html.DisplayFor(modelItem => item.Desc )</td>
+                    <td id="tdPrice">@Html.DisplayFor(modelItem => item.Price)</td>
+                    <td id="tdDiscountPrice">@Html.DisplayFor(modelItem => item.DiscountPrice)</td>
+                    <td id="tdProductTypeId">@Html.DisplayFor(modelItem => item.ProductTypeId)</td>
                     <td>
                         @Html.ActionLink("Düzenle", "ProductUpdate", new { id = item.Id }) |
-                        @Html.Editor("Adet", new { htmlAttributes = new { @name = "textField", @class = "form-control", @type = "number" } })
+                        @Html.Editor("Adet", new { htmlAttributes = new { @name = "textfield", @class = "form-control", @type = "number" } })
                     </td>
                 </tr>
             }
 
         </table>
 
-        <button type="submit" id="buttonsave" class="btn btn-primary">Sipariş ver</button>
-    </form> 
+        <button type="button" id="buttonsave" class="btn btn-primary">Sipariş ver</button>
+    </div>
 </body>
 </html>
-
 <script>
-    function SubmitForm() {
 
-        var id = $('#FormModal').serializeObject();
-        console.log(id);
-        true;
-        $.ajax({
-            type: "Post",
-            url: "/Home/SaveForm",
-            data: ({ id: id}),
-            success: function (data) {
+    $(document).ready(function () {
 
-            }
+
+        $("#buttonsave").click(function (e) {
+
+            var parameters = [];
+
+            $('table tr').each(function () {
+                var td = $('td', this);
+                var parameter = new Object();
+                parameter.Id = $(this).children("td:nth-child(1)").html();
+                parameter.Price = $(this).children("td:nth-child(4)").html();
+                parameter.DiscountPrice = $(this).children("td:nth-child(5)").html();
+                parameter.ProductTypeId = $(this).children("td:nth-child(6)").html();
+                parameter.Adet = $('input[name="Adet"]', td).val();
+                if (parameter.Adet !== "" && typeof parameter.Id != 'undefined')
+                {
+                    parameters.push(parameter);
+                }
+            });
+
+            console.log(parameters)
+
+            $.ajax({
+                type: "POST",
+                url: "/Product/SaveForm",
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(parameters),
+                dataType: "json",
+                success: function (response) {
+                }
+
+            });
+
         });
-    }
+    });
+
 </script>
+    
+    
+    @*@model IEnumerable<Dominos.Entities.Product>
+
+    @{
+        Layout = null;
+    }
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+    </head>
+    <body>
+        <div class="form-horizontal">
+            <table class="table" id="myTable">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Desc)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DiscountPrice)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ProductTypeId)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Id , new { @id = "id", @name = "id" })
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Name, new { @id = "Name", @name = "Name" })
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.Desc, new { @id = "desc", @name = "desc" })
+                        </td>
+                        <td >
+                            @Html.EditorFor(modelItem => item.Price, new { @id = "price", @name = "price" })
+                        </td>
+                        <td>
+                            @Html.EditorFor(modelItem => item.DiscountPrice, new { @id = "DiscoutPrice", @name = "DiscoutPrice" })
+                        </td>
+                        <td >
+                            @Html.EditorFor(modelItem => item.ProductTypeId, new { @id = "ProductTypeId", @name = "ProductTypeId" })
+                        </td>
+                        <td>
+                            @Html.ActionLink("Düzenle", "ProductUpdate", new { id = item.Id }) |
+                            @Html.Editor("Adet", new { htmlAttributes = new { @name = "textfield", @class = "form-control", @type = "number" } })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+            <button type="button" id="buttonsave" class="btn btn-primary" >Sipariş ver</button>
+        </div>
+    </body>
+    </html>
+    <script>
+
+        $(document).ready(function () {
+
+
+            $("#buttonsave").click(function (e) {
+
+          var parameters = [];
+
+            $('table tr').each(function () {
+                var td = $('td', this);
+                var parameter = new Object();
+                 parameter.Id = $('label[name="item.Id"]', td).val();
+                 parameter.Price = $('input[name="item.Price"]', td).val();
+                 parameter.DiscountPrice= $('input[name="item.DiscountPrice"]', td).val();
+                 parameter.ProductTypeId= $('input[name="item.ProductTypeId"]', td).val();
+                parameter.Adet = $('input[name="Adet"]', td).val();
+                if (parseInt(parameter.Adet) != 0 && typeof parameter.Id != 'undefined' && typeof parameter.Id != 'undefined'   ) { parameters.push(parameter); }
+            });
+
+                console.log(parameters)
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Product/SaveForm",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(parameters),
+                    dataType: "json",
+                    success: function (response) {
+                    }
+
+                });
+
+            });
+        });
+
+    </script>*@
