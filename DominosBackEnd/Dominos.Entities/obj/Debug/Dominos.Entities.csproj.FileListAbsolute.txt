@@ -3,3 +3,9 @@ C:\Users\pc\source\repos\DominosBackEnd\Dominos.Entities\bin\Debug\Dominos.Entit
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.csproj.CoreCompileInputs.cache
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.dll
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.pdb
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\bin\Debug\Dominos.Entities.dll
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\bin\Debug\Dominos.Entities.pdb
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.csprojAssemblyReference.cache
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.dll
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Entities\obj\Debug\Dominos.Entities.pdb

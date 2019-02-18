@@ -38,27 +38,30 @@ namespace Dominos.WebUI.Controllers
         {
 
             var itemList = new List<OrderItems>();
-            parameters.ForEach(p =>
+            if (parameters != null)
             {
-                for (int i = 0; i < Convert.ToInt32(p.Adet); i++)
+                parameters.ForEach(p =>
                 {
-                    itemList.Add(new OrderItems
+                    for (int i = 0; i < Convert.ToInt32(p.Adet); i++)
                     {
-                        ProductId = Convert.ToInt32(p.Id),
-                        ProductPrice = Convert.ToDouble(p.Price),
-                        ProductDiscountPrice = Convert.ToDouble(p.DiscountPrice)
-                    });
-                }
+                        itemList.Add(new OrderItems
+                        {
+                            ProductId = Convert.ToInt32(p.Id),
+                            ProductPrice = Convert.ToDouble(p.Price),
+                            ProductDiscountPrice = Convert.ToDouble(p.DiscountPrice)
+                        });
+                    }
 
-            });
-            var totalPrice = parameters.Where(s=> s.ProductTypeId != "3").Sum(s => Convert.ToDouble(s.Price) * Convert.ToInt32(s.Adet));
+                });
+                var totalPrice = parameters.Where(s => s.ProductTypeId != "3").Sum(s => Convert.ToDouble(s.Price) * Convert.ToInt32(s.Adet));
 
-            double discountPrice = totalPrice > 100 ? parameters.Where(s => s.ProductTypeId != "3").Sum(s => Convert.ToDouble(s.DiscountPrice)) : 0;
+                double discountPrice = totalPrice > 100 ? parameters.Where(s => s.ProductTypeId != "3").Sum(s => Convert.ToDouble(s.DiscountPrice)) : 0;
 
-            _orderManager.Add(new Order { CustomerAddressDesc = "", CustomerId = 1, TotalPrice = totalPrice, DiscountPrice = discountPrice }, itemList);
-            //Order ve OrderItems için Id yönetimi düzgün yapılmalı...
-            //Customer bilgileri alınıp servisle sorgulanıp eşlenen yoksa yeni id atılmalı...
-            //productType Tablosu kontrol edilmeli...
+                _orderManager.Add(new Order { CustomerAddressDesc = "", CustomerId = 1, TotalPrice = totalPrice, DiscountPrice = discountPrice }, itemList);
+                //Order ve OrderItems için Id yönetimi düzgün yapılmalı...
+                //Customer bilgileri alınıp servisle sorgulanıp eşlenen yoksa yeni id atılmalı...
+                //productType Tablosu kontrol edilmeli...
+            }
             return Json(true);
         }
 

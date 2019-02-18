@@ -7,3 +7,12 @@ C:\Users\pc\source\repos\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Int
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.csproj.CopyComplete
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.dll
 C:\Users\pc\source\repos\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.pdb
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\bin\Debug\Dominos.Interfaces.dll
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\bin\Debug\Dominos.Interfaces.pdb
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\bin\Debug\Dominos.Entities.dll
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\bin\Debug\Dominos.Entities.pdb
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.csprojAssemblyReference.cache
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.csproj.CopyComplete
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.dll
+C:\Users\pc\Downloads\SpecD-B.EndRepo-master\DominosBackEnd\Dominos.Interfaces\obj\Debug\Dominos.Interfaces.pdb
